@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling and Delegation</title>
+    <style>
+        .hide {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <!-- This is just an example. It's not advisable to use this way but the teacher is just explaining sth -->
+    <section onclick="alert('Paragraph Clicked')">
+        <p onclick="alert('Paragraph Clicked')"> 
+            I am a beatiful paragraph:
+            <button onclick="alert('button clicked')">Click</button>
+        </p>
+    </section>
+
+    <div id="container">
+        Click To hide
+        <button id="changeColor">Change Color</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+h2 {
+    color: indigo;
+    
+    text-align: center;
+    width: 60%;
+    font-weight: 400%;
+    font-size: 80px;
+    font-family: fantasy;
+}
+
+button {
+    color: magenta;
+    background-color: cyan;
+}
+
+p{
+    color: black;
+    background: rgb(228, 161, 37);
+}
+
+body {
+    background-color: #c5e;
+}
