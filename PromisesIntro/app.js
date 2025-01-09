@@ -36,7 +36,6 @@ const fakeRequestPromise = (url) => {
 //                         console.log(response);
 //                     }, function(err){
 //                         console.log("Error for the third time!", err)
-
 //                     }
 //                 )
 //         },
