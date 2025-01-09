@@ -66,4 +66,3 @@ fakeRequestPromise('yelp.com/api/coffee/page1')
         console.log("Upps, Error!!! ")
     })
 
-    console.log("Hola mundo")
