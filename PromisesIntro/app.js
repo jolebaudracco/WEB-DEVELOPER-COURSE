@@ -47,22 +47,41 @@ const fakeRequestPromise = (url) => {
 //         console.log("Error!", err)
 // })
 
-fakeRequestPromise('yelp.com/api/coffee/page1')
-    .then(() => {
-        console.log("Promise Resolved")
-        console.log("It's working!")
-    fakeRequestPromise('yelp.com/api/coffee/page2')
-        .then(() => {
-            console.log("Promise Resolved 2nd page")
-            console.log("It's working 2nd page!")
-        })
-        .catch(() => {
-            console.log("Promise Rejected 2nd page")
-            console.log("Upps, Error in the 2nd page!!! ")
-        })
-    })
-    .catch(() => {
-        console.log("Promise Rejected")
-        console.log("Upps, Error!!! ")
-    })
+// fakeRequestPromise('yelp.com/api/coffee/page1')
+//     .then(() => {
+//         console.log("Promise Resolved")
+//         console.log("It's working!")
+//     fakeRequestPromise('yelp.com/api/coffee/page2')
+//         .then(() => {
+//             console.log("Promise Resolved 2nd page")
+//             console.log("It's working 2nd page!")
+//         })
+//         .catch(() => {
+//             console.log("Promise Rejected 2nd page")
+//             console.log("Upps, Error in the 2nd page!!! ")
+//         })
+//     })
+//     .catch(() => {
+//         console.log("Promise Rejected")
+//         console.log("Upps, Error!!! ")
+//     })
 
+fakeRequestPromise('yelp.com/api/coffee/page1')
+    .then((data) => {
+        console.log("Page 1 is working!")
+        console.log(data)
+        return fakeRequestPromise('yelp.com/api/coffee/page2')
+    })
+    .then((data) => {
+        console.log("Page 2 is working!")
+        console.log(data)
+        return fakeRequestPromise('yelp.com/api/coffee/page3')
+    })
+    .then((data) => {
+        console.log("Page 3 is working!")
+        console.log(data)
+    })
+    .catch((err) => {
+        console.log("Oh No, this request failed!")
+        console.log(err)
+    })
