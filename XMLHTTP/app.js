@@ -8,6 +8,7 @@ req.onload = function(){
     console.log(data.name, data.height); 
 }
 
+
 req.onerror = function(){
     console.log("ERROR!!!");
     console.log(this);
